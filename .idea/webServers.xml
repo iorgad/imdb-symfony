@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="7257b655-06ad-4c40-8692-1d9d0cfa5a58" name="SymfonyTraining" url="http://symfony.dev">
+        <fileTransfer host="192.168.192.130" port="22" rootFolder="/var/www/html/symfony" accessType="SFTP" password="dfcedfd8dfcbdfcddfc5dfd9" username="dragos">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

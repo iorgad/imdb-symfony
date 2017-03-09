@@ -1,0 +1,36 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+ul.media-list {
+    float: left;
+}
+
+ul.media-list li {
+    width: 48%;
+    padding: 10px;
+    background-color: #f6f6f5;
+    border: #fff 1px solid;
+}
+
+ul.media-list li.odd {
+    float: left;
+}
+
+ul.media-list li.even {
+    float: right;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.media:first-child {
+    margin-top: 15px;
+}
+.media-list .media .media-body a {
+    font-size: 16px;
+}
+.media-list .media .media-body p {
+    font-size: 15px;
+}
