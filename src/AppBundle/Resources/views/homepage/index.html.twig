@@ -1,10 +1,6 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-    {% include "@App/components/navigation.html.twig" %}
-
-    <div class="container">
-
         <h1>{{ movieList.title }}</h1>
         <ul class="media-list">
             {% for movie in movies %}
@@ -35,7 +31,4 @@
                 {% endif %}
             </ul>
         </nav>
-
-    </div><!-- /.container -->
-
 {% endblock %}
