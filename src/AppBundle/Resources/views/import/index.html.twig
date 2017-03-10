@@ -1,17 +1,11 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-    {% include "@App/components/navigation.html.twig" %}
+    {% if notImported is defined %}
+        <h1>The list {{ notImported }} was not imported because it's already present in the database.</h1>
+    {% endif %}
 
-    <div class="container">
-
-        <div class="starter-template">
-            <h1>Bootstrap starter template</h1>
-            <h2>{{ count }}</h2>
-            <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text
-                and a mostly barebones HTML document.</p>
-        </div>
-
-    </div><!-- /.container -->
-
+    {% if count is defined %}
+        <h1>The list {{ listTitle }} was imported successfully and it contains {{ count }} movies.</h1>
+    {% endif %}
 {% endblock %}

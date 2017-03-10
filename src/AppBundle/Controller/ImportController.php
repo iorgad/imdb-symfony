@@ -43,7 +43,7 @@ class ImportController extends Controller
             $movieList = $listRepository->findOneBy(array(), array('id' => 'DESC'));
 
             if($movieList->getTitle() == $listTitle) {
-                return $this->render('@App/import/index.html.twig', array('count' => $items->count()
+                return $this->render('@App/import/index.html.twig', array('notImported' => $listTitle
                 ));
             }
 
@@ -65,7 +65,7 @@ class ImportController extends Controller
             });
         }
 
-        return $this->render('@App/import/index.html.twig', array('count' => $items->count()
+        return $this->render('@App/import/index.html.twig', array('count' => $items->count(), 'listTitle' => $listTitle
         ));
     }
 
