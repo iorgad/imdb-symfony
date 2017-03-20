@@ -34,3 +34,8 @@ h1 {
 .media-list .media .media-body p {
     font-size: 15px;
 }
+
+ul.media-list .media-body .glyphicon-star {
+    float: right;
+    color: darkgoldenrod;
+}

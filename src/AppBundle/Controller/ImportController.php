@@ -42,9 +42,11 @@ class ImportController extends Controller
 
             $movieList = $listRepository->findOneBy(array(), array('id' => 'DESC'));
 
-            if($movieList->getTitle() == $listTitle) {
-                return $this->render('@App/import/index.html.twig', array('notImported' => $listTitle
-                ));
+            if(!empty($movieList) || $movieList != null) {
+                if($movieList->getTitle() == $this->listTitle) {
+                    return $this->render('@App/import/index.html.twig', array('notImported' => $listTitle
+                    ));
+                }
             }
 
             $em = $this->getDoctrine()->getManager();
@@ -54,7 +56,6 @@ class ImportController extends Controller
             $this->list = new MovieList();
             $this->list->setTitle($listTitle);
             $this->list->setCreatedAt($date);
-            $this->list->setUpdatedAt($date);
 
             $em->persist($this->list);
 
